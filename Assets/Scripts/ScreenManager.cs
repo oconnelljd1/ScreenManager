@@ -5,8 +5,8 @@ using UnityEngine;
 public class ScreenManager : MonoBehaviour
 {
     public static ScreenManager Instance;
-    [SerializeField] private List<iScreen> ScreenList;
-    private List<iScreen> _screenStack = new List<iScreen>();
+    [SerializeField] private List<BaseScreen> ScreenList;
+    private List<BaseScreen> _screenStack = new List<BaseScreen>();
 
     public void Awake()
     {
@@ -16,17 +16,17 @@ public class ScreenManager : MonoBehaviour
         Instance = this;
     }
 
-    public T AddScreen<T>() where T : iScreen
+    public T AddScreen<T>() where T : BaseScreen
     {
         // Find and show the new screen
-        foreach (iScreen screen in ScreenList)
+        foreach (BaseScreen screen in ScreenList)
         {
             if (screen is T == false) continue;
 
             // Hide the current screen if there is one
             if (_screenStack.Count > 0 && screen.HideStack)
             {
-                foreach(iScreen stack in _screenStack)
+                foreach(BaseScreen stack in _screenStack)
                 {
                     stack.Hide();
                 }
@@ -38,7 +38,7 @@ public class ScreenManager : MonoBehaviour
             {
                 // this should never happen but I'm paranoid
                 Debug.LogError($"Screen {screen} is not a MonoBehaviour");
-                return default(T);
+                return null;
             }
             
             var newScreen = Instantiate(screenMonoBehaviour.gameObject, transform).GetComponent<T>();
@@ -48,7 +48,7 @@ public class ScreenManager : MonoBehaviour
             return newScreen;
             // screen.Show();
         }
-        return default(T);
+        return null;
     }
 
     // I dont like this because I want to close the screen by type

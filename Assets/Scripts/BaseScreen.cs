@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BaseScreen : MonoBehaviour, iScreen
+// A class that must be extended from if you expect to use it with the ScreenManager
+public class BaseScreen : MonoBehaviour
 {
     [SerializeField] private bool _hideStack = false;
     public bool HideStack {

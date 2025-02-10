@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7185461683752733963}
   - component: {fileID: 2258246378279376229}
   - component: {fileID: 1481700969391140688}
-  - component: {fileID: 9048265694051215856}
+  - component: {fileID: 7166747700774909273}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9048265694051215856
+--- !u!114 &7166747700774909273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,10 +86,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867045722420858716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9caa15a660b4faf47b00120d03f9c9b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c3b2f8d6f502d6749a105bf2966a1f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hideStack: 0
+  _singleInstance: 0
 --- !u!1 &3133158186701934433
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +212,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9048265694051215856}
+      - m_Target: {fileID: 7166747700774909273}
         m_TargetAssemblyTypeName: BaseScreen, Assembly-CSharp
         m_MethodName: Hide
         m_Mode: 1

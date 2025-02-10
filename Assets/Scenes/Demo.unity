@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,8 +134,9 @@ GameObject:
   - component: {fileID: 160805319}
   - component: {fileID: 160805318}
   - component: {fileID: 160805317}
+  - component: {fileID: 160805320}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: RedButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 160805318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 160805320}
+        m_TargetAssemblyTypeName: DemoButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &160805318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +255,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160805315}
   m_CullTransparentMesh: 1
+--- !u!114 &160805320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160805315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c228006a2ffdc42803f3ee6b99bc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenType: RedScreen
 --- !u!1 &393753477
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,8 +556,9 @@ GameObject:
   - component: {fileID: 1465295898}
   - component: {fileID: 1465295897}
   - component: {fileID: 1465295896}
+  - component: {fileID: 1465295899}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BlueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1465295897}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1465295899}
+        m_TargetAssemblyTypeName: DemoButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465295897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +677,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465295894}
   m_CullTransparentMesh: 1
+--- !u!114 &1465295899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465295894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c228006a2ffdc42803f3ee6b99bc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenType: BlueScreen
 --- !u!1 &1634920299
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,8 +702,9 @@ GameObject:
   - component: {fileID: 1634920303}
   - component: {fileID: 1634920302}
   - component: {fileID: 1634920301}
+  - component: {fileID: 1634920304}
   m_Layer: 5
-  m_Name: Button
+  m_Name: WhiteButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +772,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1634920302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1634920304}
+        m_TargetAssemblyTypeName: DemoButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1634920302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +823,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634920299}
   m_CullTransparentMesh: 1
+--- !u!114 &1634920304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634920299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c228006a2ffdc42803f3ee6b99bc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenType: WhiteScreen
 --- !u!1 &1762373231
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,8 +848,9 @@ GameObject:
   - component: {fileID: 1762373235}
   - component: {fileID: 1762373234}
   - component: {fileID: 1762373233}
+  - component: {fileID: 1762373236}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: GreenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,7 +918,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1762373234}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1762373236}
+        m_TargetAssemblyTypeName: DemoButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1762373234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +969,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762373231}
   m_CullTransparentMesh: 1
+--- !u!114 &1762373236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762373231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c228006a2ffdc42803f3ee6b99bc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenType: GreenScreen
 --- !u!1 &1792426977
 GameObject:
   m_ObjectHideFlags: 0

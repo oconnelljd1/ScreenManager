@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2946915424240689653}
+      - m_Target: {fileID: 1974593518604898811}
         m_TargetAssemblyTypeName: BaseScreen, Assembly-CSharp
         m_MethodName: Hide
         m_Mode: 1
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 8936261350376453302}
   - component: {fileID: 3615007449697827790}
   - component: {fileID: 2288640305518101159}
-  - component: {fileID: 2946915424240689653}
+  - component: {fileID: 1974593518604898811}
   m_Layer: 5
   m_Name: White
   m_TagString: Untagged
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2946915424240689653
+--- !u!114 &1974593518604898811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,10 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5192958918327027400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9caa15a660b4faf47b00120d03f9c9b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 91790d383aeb20f439bee0810ea3d7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hideStack: 0
+  _singleInstance: 0
 --- !u!1 &7809947110761798932
 GameObject:
   m_ObjectHideFlags: 0
